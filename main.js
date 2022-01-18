@@ -129,9 +129,13 @@ function reduceHour(){
 }
 
 let myTimer;
+let timerActive = false;
 
 startButton.addEventListener("click", ()=>{
-    myTimer = setInterval(startTimer, 1000);
+    if (timerActive == false){
+        myTimer = setInterval(startTimer, 1000);
+    }
+    timerActive = true;
 })
 
 
@@ -141,6 +145,7 @@ let stopButton = document.querySelector(".stop-btn");
 
 function stopTimer(){
     clearInterval(myTimer);
+    timerActive = false;
     hoursOnDisplay = "00";
     hourDisplay.innerText = hoursOnDisplay;
     selectHours.selectedIndex = 0;
