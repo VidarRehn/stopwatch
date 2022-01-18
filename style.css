@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 body {
@@ -20,8 +19,8 @@ body {
 }
 
 body .start-screen {
-  height: 80%;
-  width: 80%;
+  height: 70%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,6 +36,40 @@ body .start-screen {
           align-items: center;
 }
 
+body .start-screen > * {
+  margin-top: 30px;
+}
+
+body .start-screen .set-timer {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .start-screen .set-timer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .start-screen .set-timer select {
+  height: 40px;
+  width: 60px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 body .start-screen .display {
   height: 100px;
   width: 300px;
@@ -50,5 +83,34 @@ body .start-screen .display {
       -ms-flex-align: center;
           align-items: center;
   font-size: 60px;
+}
+
+body .start-screen .buttons {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .start-screen .buttons button {
+  padding: 10px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  font-size: 20px;
+  border: 2px solid black;
+  color: white;
+  cursor: pointer;
+}
+
+body .start-screen .buttons .stop-btn {
+  background-color: red;
+}
+
+body .start-screen .buttons .start-btn {
+  background-color: green;
 }
 /*# sourceMappingURL=style.css.map */
