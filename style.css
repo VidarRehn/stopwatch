@@ -21,6 +21,7 @@ body {
 body .start-screen {
   height: 70%;
   width: 70%;
+  max-width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
