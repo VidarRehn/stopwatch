@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="start-screen">
+        <h1>Stopwatch</h1>
+        <div class="set-timer">
+            <select name="hours" id="select-hours"></select>
+            <select name="minutes" id="select-minutes"></select>
+            <select name="seconds" id="select-seconds"></select>
+        </div>
+        <div class="display">
+            <p>
+                <span class="hour-display">00</span>:
+                <span class="minute-display">00</span>:
+                <span class="second-display">00</span>
+            </p>
+        </div>
+        <div class="buttons">
+            <button class="stop-btn">Stop</button>
+            <button class="start-btn">Start</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
