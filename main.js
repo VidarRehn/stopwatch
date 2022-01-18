@@ -79,7 +79,7 @@ let secondsOnDisplay = 0;
 
 let startButton = document.querySelector(".start-btn");
 
-function countDown(){
+function startTimer(){
     if (hoursOnDisplay != 0 || minutesOnDisplay != 0 || secondsOnDisplay != 0){
         if (secondsOnDisplay != 0){ 
             reduceSecond();
@@ -128,7 +128,30 @@ function reduceHour(){
     }
 }
 
+let myTimer;
+
 startButton.addEventListener("click", ()=>{
-    setInterval(countDown, 1000);
+    myTimer = setInterval(startTimer, 1000);
 })
 
+
+// stop timer 
+
+let stopButton = document.querySelector(".stop-btn");
+
+function stopTimer(){
+    clearInterval(myTimer);
+    hoursOnDisplay = "00";
+    hourDisplay.innerText = hoursOnDisplay;
+    selectHours.selectedIndex = 0;
+    minutesOnDisplay = "00";
+    minuteDisplay.innerText = minutesOnDisplay;
+    selectMinutes.selectedIndex = 0;
+    secondsOnDisplay = "00";
+    secondDisplay.innerText = secondsOnDisplay;
+    selectSeconds.selectedIndex = 0;
+}
+
+stopButton.addEventListener("click", ()=>{
+    stopTimer();
+})
