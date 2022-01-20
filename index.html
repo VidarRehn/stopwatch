@@ -9,8 +9,11 @@
 </head>
 <body>
     <div class="start-screen">
-        <h1>Stopwatch</h1>
-        <div class="set-timer">
+        <div class="selection-buttons">
+            <button class="stopwatch active">Stopwatch</button>
+            <button class="timer">Timer</button>
+        </div>
+        <div class="set-timer hide">
             <div>
                 <select name="hours" id="select-hours"></select>
                 <label for="hours">Hours</label>
@@ -28,12 +31,17 @@
             <p>
                 <span class="hour-display">00</span>:
                 <span class="minute-display">00</span>:
-                <span class="second-display">00</span>
+                <span class="second-display">00</span><span class="colon">:</span>
+                <span class="millisecond-display">00</span>
             </p>
         </div>
-        <div class="buttons">
-            <button class="stop-btn">Stop</button>
+        <div class="stopwatch-buttons">
+            <button class="stop-btn">Pause</button>
             <button class="start-btn">Start</button>
+        </div>
+        <div class="timer-buttons hide">
+            <button class="stop-btn">Pause</button>
+            <button class="start-btn">Start timer</button>
         </div>
     </div>
     
