@@ -177,6 +177,7 @@ stopPauseStopwatchButton.addEventListener("click", ()=>{
         startStopwatchButton.style.opacity = "1";
         if (stopPauseStopwatchButton.innerText == "Restart"){
             clearInterval(myStopwatch);
+            stopwatchActive = false;
             stopPauseStopwatchButton.style.opacity = "0.3";
             stopPauseStopwatchButton.innerText = "Pause";
             stopPauseStopwatchButton.style.backgroundColor = "grey";
@@ -186,6 +187,7 @@ stopPauseStopwatchButton.addEventListener("click", ()=>{
             clearInterval(myStopwatch);
             stopPauseStopwatchButton.style.backgroundColor = "red";
             stopPauseStopwatchButton.innerText = "Restart";
+            stopwatchActive = false;
         }
     }
 })
